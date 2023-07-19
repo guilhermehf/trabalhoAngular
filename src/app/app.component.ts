@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  nome = 'User 1';
+  color = "blue";
+
+    mudarNome(){
+      if(this.nome == 'user1')
+        this.nome = "user2";
+      else this.nome = 'user1';  
+
+    }
 }
+

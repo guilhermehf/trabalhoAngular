@@ -1,0 +1,20 @@
+<p>tabela-produtos {{isEspecial}}</p>
+<input type="checkbox" [checked]='isEspecial' (change)="alterarEspecial()" />
+<button [ngClass]="isEspecial ? 'especial' :''" (click)="alterarEspecial()">
+    Especial
+</button>
+<br/>
+<div *ngIf='isEspecial' >
+<input type="number" [(ngModel)]="numero"/> 
+<button (click)="incrementar()">+</button>
+<button (click)="addNumberInList()">Add</button>
+{{numero}}
+
+</div>
+
+<ul>
+    <li *ngFor="let num of numerosLista">
+        {{num}}
+    </li>
+</ul>
+    <p>{{numerosLista | json}}</p>
